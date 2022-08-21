@@ -1,0 +1,54 @@
+.Navbar {
+  position: sticky;
+  top: 0;
+  transform: translateY(-100px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 1em;
+  transition: transform 400ms ease-in;
+  background-color: black;
+  color: white;
+}
+.Navbar .nav__con {
+  position: absolute;
+  top: 110%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  width: 100%;
+  left: -200%;
+  height: 80vh;
+  padding: 1em;
+  gap: 0.5em;
+  transition: left 250ms ease-in;
+}
+.Navbar .nav__con .nav__item {
+  color: white;
+  padding: 0.5em 1em;
+  background-color: #505050;
+  width: 100%;
+  border-radius: 2px;
+  transition: background-color 200ms ease-in;
+  text-align: center;
+}
+.Navbar .nav__con .nav__item:hover, .Navbar .nav__con .nav__item:focus {
+  background-color: dimgray;
+}
+.Navbar #nav__toggle:checked + .nav__con {
+  left: 0;
+}
+@media (min-width: 650px) {
+  .Navbar label {
+    display: none;
+  }
+  .Navbar .nav__con {
+    all: unset;
+    gap: 1em;
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=Navbar.css.map */

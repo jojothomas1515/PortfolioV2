@@ -1,15 +1,13 @@
-*, *::after, *::before {
+*, *::after, *::before{
   padding: 0;
-  margin: 0;
+  margin:0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
 }
-
-#root {
+#root{
   padding: 1rem;
-  background-color: #505050;
+  background-color: darken(dimgray, 10);
   height: 100vh;
 }
 
-/*# sourceMappingURL=App.css.map */

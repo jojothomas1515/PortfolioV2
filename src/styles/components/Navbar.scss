@@ -1,0 +1,64 @@
+@use "../globals";
+
+//styling the navbar to stay sticky and fade out when scrolling down
+.Navbar {
+  position: sticky;
+  top:0;
+  transform: translateY(-100px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 1em;
+  transition: transform 400ms ease-in;
+
+  background-color: globals.$color-pitch;
+  color: white;
+
+  //  make nav invisible for small screens
+  .nav__con {
+    position: absolute;
+    top: 110%;
+    background-color: globals.$color-pitch;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    width: 100%;
+    left: -200%;
+    height: 80vh;
+    padding: 1em;
+    gap: .5em;
+    transition: left 250ms ease-in;
+
+    .nav__item {
+      color: white;
+      padding: .5em 1em;
+      background-color: darken(dimgray, 10);
+      width: 100%;
+      border-radius: 2px;
+      transition: background-color 200ms ease-in;
+      text-align: center;
+
+      &:hover, &:focus {
+        background-color: dimgray;
+      }
+    }
+
+  }
+
+  #nav__toggle:checked + .nav__con {
+    left: 0;
+  }
+
+  @media (min-width: 650px) {
+    label {
+      display: none;
+    }
+    .nav__con {
+      all: unset;
+      gap: 1em;
+      display: flex;
+    }
+  }
+
+}
