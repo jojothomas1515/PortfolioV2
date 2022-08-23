@@ -4,12 +4,16 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  color: white;
 }
 
 #root {
   padding: 1rem;
-  background-color: #505050;
-  height: 100vh;
+  background-color: #1d1d1d;
+}
+
+body {
+  background-color: #1d1d1d;
 }
 
 /*# sourceMappingURL=App.css.map */

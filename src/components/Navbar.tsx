@@ -10,7 +10,12 @@ function Navbar() {
         // @ts-ignore
         const navb:HTMLDivElement = navbarRef.current;
         navb.style.transform = "translateY(0)";
+
+        window.onscroll = () =>{
+window.scrollY >= 80?navb.style.opacity ="0.5":navb.style.opacity="1"
+        }
     }, [])
+
 
 
     return (

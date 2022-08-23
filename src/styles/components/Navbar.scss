@@ -10,7 +10,11 @@
   align-items: center;
   height: 4rem;
   padding: 1em;
-  transition: transform 400ms ease-in;
+  transition: transform 400ms ease-in , opacity 250ms ease-in-out;
+  z-index: 1000;
+
+
+
 
   background-color: globals.$color-pitch;
   color: white;
@@ -28,7 +32,8 @@
     height: 80vh;
     padding: 1em;
     gap: .5em;
-    transition: left 250ms ease-in;
+    transition: left 350ms ease-in;
+    z-index: 1000;
 
     .nav__item {
       color: white;
@@ -36,7 +41,7 @@
       background-color: darken(dimgray, 10);
       width: 100%;
       border-radius: 2px;
-      transition: background-color 200ms ease-in;
+      transition: background-color 200ms ease-in-out;
       text-align: center;
 
       &:hover, &:focus {
@@ -61,4 +66,8 @@
     }
   }
 
+}
+
+.Navbar:hover{
+  opacity: 1 !important; ;
 }
