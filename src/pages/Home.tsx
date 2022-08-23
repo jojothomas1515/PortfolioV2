@@ -1,6 +1,5 @@
 import React from 'react';
 import "../styles/pages/Home.css"
-import PropTypes from 'prop-types';
 
 Home.propTypes = {
 
